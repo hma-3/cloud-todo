@@ -1,0 +1,4 @@
+aws_region    = "eu-central-1"
+project_name  = "cloud-todo-mvp"
+cors_origin   = "https://your-frontend-domain.example"
+app_image_tag = "latest"
