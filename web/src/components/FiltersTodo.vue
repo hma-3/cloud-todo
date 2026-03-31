@@ -6,8 +6,8 @@ defineProps<{
 }>();
 
 defineEmits<{
-  (e: 'update:statusFilter', value: Event): void;
-  (e: 'update:priorityFilter', value: Event): void;
+  (e: "update:statusFilter", value: Event): void;
+  (e: "update:priorityFilter", value: Event): void;
 }>();
 </script>
 

@@ -65,12 +65,12 @@ onMounted(() => {
             :src="`icons/${todo.priority.toLowerCase()}-priority.svg`"
             alt="Priority"
             class="todos-item__priority-icon"
-          >
+          />
           <strong>{{ todo.title }}</strong>
         </div>
 
         <span class="todos-item__due-date">
-          {{ todo.dueDate ? todo.dueDate.slice(0, 10) : 'Anytime' }}
+          {{ todo.dueDate ? todo.dueDate.slice(0, 10) : "Anytime" }}
         </span>
       </div>
 

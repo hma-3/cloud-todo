@@ -13,7 +13,6 @@ import AllTodos from "./components/AllTodos.vue";
   </main>
 </template>
 
-
 <style scoped>
 .title {
   margin: 0;
