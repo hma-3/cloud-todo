@@ -31,4 +31,4 @@ flowchart LR
 ## Trade-offs
 
 - API key is intentionally minimal and simple for MVP; stronger auth should migrate to Cognito/JWT.
-- Frontend deploy and backend deploy are orchestrated in CI using infra outputs to keep delivery reproducible.
+- The project is currently run locally; CI/CD automation is intentionally disabled.

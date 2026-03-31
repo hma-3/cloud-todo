@@ -1,6 +1,6 @@
 # Cloud ToDo API + Web Client
 
-Full-stack MVP with a Vue client, Node/Express API, PostgreSQL, Docker runtime, and AWS Terraform stack.
+Full-stack MVP with a Vue client, Node/Express API, PostgreSQL, and Docker for local development.
 
 ## Local run (Docker Compose + Vite)
 
@@ -21,7 +21,7 @@ API_HOST_PORT=3002 DB_HOST_PORT=55433 docker compose up --build -d
 
 ```bash
 cd web
-cp .env.dist .env
+cp .env.example .env
 npm install
 npm run dev
 ```
@@ -72,22 +72,7 @@ npm run prisma:deploy
 }
 ```
 
-## AWS deploy outputs
+## Notes
 
-Terraform in `infra/terraform` provisions:
-- App Runner backend
-- RDS PostgreSQL
-- Secrets Manager secret for `DATABASE_URL`
-- S3 bucket for frontend assets
-- CloudFront distribution for frontend delivery
-
-After apply, use outputs:
-- `apprunner_service_url` (API URL)
-- `frontend_cloudfront_domain` (frontend URL)
-- `frontend_bucket_name`
-- `frontend_cloudfront_distribution_id`
-
-## CI/CD
-
-- CI: lint + format check + tests + build (`.github/workflows/ci.yml`)
-- Deploy (main): build image, push to ECR, trigger App Runner, upload web to S3, invalidate CloudFront (`.github/workflows/deploy.yml`)
+- This repository is currently configured for local development only.
+- Automatic CI/CD and deploy workflows were removed.
